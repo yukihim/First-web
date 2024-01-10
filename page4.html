@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<style> 
+    *{ Color : #ffc0cb; 
+    Background : #7a5980;} 
+</style>
+
+<html>
+<head>
+    <title>My first website</title>
+</head>
+<body>
+    <h1>Content</h1>
+
+    <h2>Music:</h2><hr>
+    <audio controls id="JUNGLESENSE_GAS_PEDAL">
+        <source src="/audios/JUNGLESENSE_GAS_PEDAL.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio><hr>
+
+    <p>Click the buttons to get or set the volume of the audio player.</p>
+
+    <button onclick="getVolume()" type="button">What is the volume?</button>
+    <button onclick="setHalfVolume()" type="button">Set volume to 0.05</button>
+    <button onclick="setFullVolume()" type="button">Set volume to 1.0</button>
+
+    <!-- This one will manipulate volume of JUNGLESENSE_GAS_PEDAL -->
+    <script>
+        var x = document.getElementById("JUNGLESENSE_GAS_PEDAL");
+        function getVolume() { 
+            alert(x.volume);
+        }
+        function setHalfVolume() { 
+            x.volume = 0.05;
+        }
+        function setFullVolume() { 
+            x.volume = 1.0;
+        }
+    </script>
+
+    <h2>Lists:</h2>
+    <p>
+        - Back to first page:
+        <a href="page1.html" title="This will take you back to first page!">
+            Menu.
+        </a><br>
+        - Back to second page:
+        <a href="page2.html" title="This will take you back to second page!">
+            Stuff.
+        </a><br>
+        - Back to third page:
+        <a href="page3.html" title="This will take you back to third page!">
+            Socials.
+        </a>
+    </p>
+</body> 
+</html>
